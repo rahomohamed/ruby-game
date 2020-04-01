@@ -19,11 +19,12 @@ class Game
       player.lose
     end
   end
+
   def turn(player)
-    if players[0].lives == 0 ||  players[1].lives == 0
-      if players[0].lives == 0
+    if players[0].lives == 0 
         puts "#{players[1].name} wins the game with a score of #{players[1].lives}/3"
-      else
+        
+        if players[1].lives == 0 
         puts "#{players[0].name} wins the game with a score of #{players[0].lives}/3"
       end
       puts "----- GAME OVER -----\nGood bye!"
